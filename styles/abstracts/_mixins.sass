@@ -1,0 +1,10 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// setDisplay mixin
+// setting default display to grid and positions center
+@mixin setDisplay($dis: grid, $hor: center, $ver: center)
+    display: $dis
+    justify-content: $hor
+    align-content: $ver

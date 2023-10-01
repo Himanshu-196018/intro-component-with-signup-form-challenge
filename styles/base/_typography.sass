@@ -8,7 +8,6 @@ body
     font-weight: $fw-400
 
 .intro
-
     h1
         font-size: 1.7rem
         line-height: 1.37
@@ -24,6 +23,9 @@ body
     span
         font-weight: $fw-600
 
+.error-msg
+    font-size: 0.8rem
+
 button
     text-transform: uppercase
     font-weight: $fw-600
@@ -38,3 +40,10 @@ button
     a
         font-weight: $fw-700
         text-decoration: none
+
+@media screen and (width > $break-point)
+    .intro
+        h1
+            font-size: 3.2rem
+            line-height: 1.1
+            letter-spacing: -1px

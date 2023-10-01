@@ -95,6 +95,10 @@ body {
   font-weight: 600;
 }
 
+.error-msg {
+  font-size: 0.8rem;
+}
+
 button {
   text-transform: uppercase;
   font-weight: 600;
@@ -112,6 +116,13 @@ button {
   text-decoration: none;
 }
 
+@media screen and (width > 800px) {
+  .intro h1 {
+    font-size: 3.2rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+}
 form {
   display: flex;
   justify-content: center;
@@ -137,7 +148,12 @@ form input {
   height: 3.5rem;
   padding: 0 4rem 0 1.1rem;
   border-radius: 4px;
-  border: 1px solid hsl(246, 25%, 77%);
+  border: 1px solid grey;
+}
+form .error-msg {
+  display: none;
+  text-align: right;
+  margin: 3px 0;
 }
 form input:focus {
   outline: none;
@@ -150,8 +166,6 @@ form button {
 }
 
 body {
-  background-attachment: fixed;
-  background-size: cover;
   text-align: center;
 }
 
@@ -205,10 +219,56 @@ main {
   .intro {
     text-align: left;
   }
-  .intro h1 {
+  .intro h1, .intro p {
     margin: 0;
+  }
+  .intro p {
+    margin-top: 1.7rem;
   }
   .signup-form {
     padding: 0 0 0 1.5rem;
   }
+}
+body {
+  background: hsl(0, 100%, 74%) url("../images/bg-intro-desktop.png") no-repeat top center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.intro, .trial-info-box, button, .footer-body {
+  color: white;
+}
+
+.trial-info-box {
+  background-color: hsl(248, 32%, 49%);
+}
+
+form {
+  background-color: white;
+}
+form input:focus {
+  border: 2px solid hsl(246, 25%, 77%);
+}
+
+.error-msg, .t-and-c a {
+  color: hsl(0, 100%, 74%);
+}
+
+button {
+  background-color: hsl(154, 59%, 51%);
+}
+button:hover, button:focus {
+  background-color: hsl(154, 59%, 71%);
+  cursor: pointer;
+}
+
+.t-and-c {
+  color: hsl(246, 25%, 77%);
+}
+
+.footer-body a {
+  color: hsl(154, 59%, 51%);
+}
+.footer-body a:focus, .footer-body a:hover {
+  color: hsl(248, 32%, 49%);
 }/*# sourceMappingURL=style.css.map */

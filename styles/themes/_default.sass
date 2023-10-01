@@ -2,3 +2,38 @@
 // When having several themes, this file contains everything related to the
 // default one.
 // -----------------------------------------------------------------------------
+
+body
+    background: $red $bg-img-url no-repeat top center
+    background-attachment: fixed
+    background-size: cover
+
+.intro, .trial-info-box, button, .footer-body
+    color: white
+
+.trial-info-box
+    background-color: $blue
+
+form
+    background-color: white
+
+    input:focus
+        border: 2px solid $grayish-blue
+
+.error-msg, .t-and-c a
+    color: $red
+
+button
+    background-color: $green
+    &:hover, &:focus
+        background-color: $light-green
+        cursor: pointer
+
+.t-and-c
+    color: $grayish-blue
+
+.footer-body a
+    color: $green
+
+    &:focus, &:hover
+        color: $blue

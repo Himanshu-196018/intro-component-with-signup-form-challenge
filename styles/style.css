@@ -1,0 +1,138 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.intro {
+  margin-top: 5.5rem;
+}
+.intro h1 {
+  font-size: 1.7rem;
+  line-height: 1.37;
+}
+.intro p {
+  font-size: 0.9714rem;
+  line-height: 1.7;
+  word-spacing: 0.125rem;
+}
+
+.trial-info-box span {
+  font-weight: 600;
+}
+
+body {
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+}
+
+main {
+  width: min(100%, 1160px);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  min-height: 100vh;
+}
+
+.intro {
+  margin-top: 5.5rem;
+}
+.intro h1, .intro p {
+  margin-inline: auto;
+}
+.intro h1 {
+  width: 20ch;
+}
+.intro p {
+  max-width: 55ch;
+  margin-top: 1.4rem;
+}
+
+.signup-form {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 1.6rem;
+  margin-top: 3.8rem;
+}
+
+.trial-info-box {
+  display: block;
+  padding: 1.23rem;
+  border-radius: 10px;
+  box-shadow: 0 8px rgba(0, 0, 0, 0.1);
+}/*# sourceMappingURL=style.css.map */

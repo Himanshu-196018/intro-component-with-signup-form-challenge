@@ -268,7 +268,7 @@ form input:focus {
 button {
   background-color: hsl(154, 59%, 51%);
 }
-button:hover, button:focus {
+button:hover {
   background-color: hsl(154, 59%, 71%);
   cursor: pointer;
 }
@@ -282,4 +282,16 @@ button:hover, button:focus {
 }
 .footer-body a:focus, .footer-body a:hover {
   color: hsl(248, 32%, 49%);
+}
+
+.error input {
+  border-color: hsl(0, 100%, 74%);
+  color: hsl(0, 100%, 74%);
+}
+.error img, .error p {
+  display: block;
+}
+
+.success input {
+  border-color: hsl(154, 59%, 51%);
 }/*# sourceMappingURL=style.css.map */

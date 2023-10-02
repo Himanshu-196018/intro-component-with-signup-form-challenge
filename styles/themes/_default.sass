@@ -25,7 +25,7 @@ form
 
 button
     background-color: $green
-    &:hover, &:focus
+    &:hover
         background-color: $light-green
         cursor: pointer
 
@@ -37,3 +37,16 @@ button
 
     &:focus, &:hover
         color: $blue
+
+// style for form error class
+.error
+    input
+        border-color: $red
+        color: $red
+
+    img, p
+        display: block
+
+.success
+    input
+        border-color: $green

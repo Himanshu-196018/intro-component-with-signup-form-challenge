@@ -5,6 +5,7 @@ This is a solution to the [Intro component with signup form challenge on Fronten
 ## Table of contents
 
 - [Overview](#overview)
+  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -15,6 +16,16 @@ This is a solution to the [Intro component with signup form challenge on Fronten
 - [Acknowledgments](#acknowledgments)
 
 ## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Receive an error message when the `form` is submitted if:
+  - Any `input` field is empty. The message for this error should say *"[Field Name] cannot be empty"*
+  - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say *"Looks like this is not an email"*
 
 ### Screenshot
 
@@ -30,14 +41,49 @@ This is a solution to the [Intro component with signup form challenge on Fronten
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- Sass/CSS custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
 
 ### What I learned
 
-This project helped me to improve my basic styling and palcement of different elements by building a {Project name}.
+This project provided a valuable learning experience for me. I learned to validate multiple form input together with just a single click of a button through JS.
+
+- I added a click function on a button and validate each input through that function
+
+```
+/*******
+  fucnction for validating form input elements
+ ******/
+const validateForm = () => {
+  // looping through each child in collection inputLists
+  for (let i = 0; i < inputLists.length; i++) {
+    // selecting input field (each child of inputLists contain 3 elements namely input img and p)
+    // img is for error icon and p is for error message (check index.html)
+    let childs = inputLists[i].children[0];
+
+    // checking if input field is empty also for valid email and password input field
+    // else style for success
+    if (childs.value == "") {
+      emptyForm(inputLists[i]);
+    } else if (childs.name == "Email") {
+      checkEmail(inputLists[i]);
+    } else if (childs.name == "Password") {
+      checkPassword(inputLists[i]);
+    } else {
+      inputLists[i].classList.add("success");
+      inputLists[i].classList.remove("error");
+    }
+  }
+};
+
+/*******
+    adding onclick function to submit button
+ ******/
+submitButton.onclick = validateForm;
+
+```
 
 ### Useful resources
 
